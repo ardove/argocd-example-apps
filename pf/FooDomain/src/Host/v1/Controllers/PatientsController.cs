@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using PF.FooDomain.v1.Controllers.Data;
 using PF.Core.AspNetCore.Results;
 
@@ -11,11 +12,20 @@ namespace PF.FooDomain.v1.Controllers
     [ApiController]
     public class PatientsController : ControllerBase
     {
+        private readonly ILogger<PatientsController> _logger;
+
+        public PatientsController(ILogger<PatientsController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet("{patientGuid}")]
         public async Task<ActionResult<GetPatientResponse>> GetAsync(
             Guid patientGuid,
             CancellationToken cancellationToken = default)
         {
+            _logger.LogDebug("Retrieving patient PPG={patientGuid}", patientGuid);
+
             return Ok(
                 new GetPatientResponse
                 {
