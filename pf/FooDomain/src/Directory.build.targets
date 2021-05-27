@@ -1,0 +1,9 @@
+<Project ToolsVersion="Current">
+  <PropertyGroup>
+    <PFCoreBuildCommunityTargetsPath>/tools/PFCoreBuildTargets/common.targets</PFCoreBuildCommunityTargetsPath>
+    <SystemDrive>$([System.IO.Path]::GetPathRoot($(MSBuildProjectFullPath)))</SystemDrive>
+    <PFCoreBuildCommunityTargetsPath>$(SystemDrive)$(PFCoreBuildCommunityTargetsPath)</PFCoreBuildCommunityTargetsPath>
+  </PropertyGroup>
+
+  <Import Project="$(PFCoreBuildCommunityTargetsPath)"/>
+</Project>

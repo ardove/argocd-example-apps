@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageParams>
+  <Filters>
+    <ExcludeFilters>
+	    <FilterEntry>
+        <ModuleMask>*Tests*</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ClassMask>PF.ConAuditrDomain.DataAccess*</ClassMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ClassMask>MySqlConnector*</ClassMask>
+      </FilterEntry>
+    </ExcludeFilters>
+  </Filters>
+  <AttributeFilters>
+    <AttributeFilterEntry>System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute</AttributeFilterEntry>
+  </AttributeFilters>
+</CoverageParams>

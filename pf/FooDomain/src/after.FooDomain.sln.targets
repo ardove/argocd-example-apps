@@ -1,0 +1,12 @@
+<Project ToolsVersion="Current">
+  <PropertyGroup>
+    <ApplicationVersion Condition="'$(ApplicationVersion)'==''">0.0.0</ApplicationVersion>
+    <UnitTestThreshold Condition="'$(UnitTestThreshold)'==''">80</UnitTestThreshold>
+  </PropertyGroup>
+
+  <Import Project="Directory.build.targets"/>
+
+  <Target Name="CIBuild">
+    <CallTarget Targets="Build;RunUnitTestsWithCodeCoverage;BuildAndTagDockerImage"/>
+  </Target>
+</Project>

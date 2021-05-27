@@ -1,0 +1,41 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:9304",
+      "sslPort": 0
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "PRACTICE_FUSION_APP_CONFIG_URI": "https://pf-dev-phrconfigurationstore.s3.amazonaws.com/global.json",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "PF.FooDomain": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "PRACTICE_FUSION_APP_CONFIG_URI": "https://pf-dev-phrconfigurationstore.s3.amazonaws.com/global.json",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "PRACTICE_FUSION_APP_CONFIG_URI": "https://pf-dev-phrconfigurationstore.s3.amazonaws.com/global.json",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
